@@ -22,3 +22,8 @@
 networks:
   rabbitmq_net:
     driver: bridge
+  taskflow.application:
+    image: taskflow.application
+    build:
+      context: .
+      dockerfile: TaskFlow.Application/Dockerfile
