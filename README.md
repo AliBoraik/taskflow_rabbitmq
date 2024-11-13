@@ -12,12 +12,12 @@ This repository provides a simple RabbitMQ integration within a background worke
 
 ### Prerequisites
 
-- **Docker** (with `docker-compose`)
-- **.NET SDK** (Version 6 or later) *(optional, only for development or debugging)*
+- **Docker** (with `docker compose`)
+- **.NET SDK** (Version 7) *(optional, only for development or debugging)*
 
 ### Docker Setup for RabbitMQ
 
-The project uses `docker-compose` to start RabbitMQ and the application.
+The project uses `docker compose` to start RabbitMQ and the application.
 
 ### Clone the Repository
 
@@ -26,3 +26,4 @@ Clone this repository to your local machine:
 ```bash
 git clone https://github.com/your-username/taskflow-rabbitmq.git
 cd taskflow-rabbitmq
+docker compose up
