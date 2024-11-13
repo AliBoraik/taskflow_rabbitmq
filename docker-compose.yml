@@ -8,12 +8,6 @@
       - "5166:80"
       - "5167:443"
 
-  Consumer:
-    image: consumer.worker
-    build:
-      context: .
-      dockerfile: TaskFlow.WorkerService/Dockerfile
-      
   Rabbitmq:
     image: rabbitmq:3-management-alpine
     container_name: 'rabbitmq'
@@ -23,3 +17,11 @@
     volumes:
       - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
       - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+  Consumer:
+    image: consumer.worker
+    build:
+      context: .
+      dockerfile: TaskFlow.WorkerService/Dockerfile
+    depends_on:
+      - Rabbitmq
+    restart: on-failure
