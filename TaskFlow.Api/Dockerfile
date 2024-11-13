@@ -7,6 +7,10 @@ FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["TaskFlow.Api/TaskFlow.Api.csproj", "TaskFlow.Api/"]
+COPY ["TaskFlow.Domain/TaskFlow.Domain.csproj", "TaskFlow.Domain/"]
+COPY ["TaskFlow.Application/TaskFlow.Application.csproj", "TaskFlow.Application/"]
+COPY ["TaskFlow.Interfaces/TaskFlow.Interfaces.csproj", "TaskFlow.Interfaces/"]
+
 RUN dotnet restore "TaskFlow.Api/TaskFlow.Api.csproj"
 COPY . .
 WORKDIR "/src/TaskFlow.Api"

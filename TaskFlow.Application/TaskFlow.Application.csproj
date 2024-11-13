@@ -12,4 +12,9 @@
       <PackageReference Include="RabbitMQ.Client" Version="7.0.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\TaskFlow.Domain\TaskFlow.Domain.csproj" />
+      <ProjectReference Include="..\TaskFlow.Interfaces\TaskFlow.Interfaces.csproj" />
+    </ItemGroup>
+
 </Project>
