@@ -24,6 +24,6 @@ The project uses `docker compose` to start RabbitMQ and the application.
 Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/taskflow-rabbitmq.git
+git clone https://github.com/AliBoraik/taskflow_rabbitmq.git
 cd taskflow-rabbitmq
 docker compose up
